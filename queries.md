@@ -23,3 +23,17 @@ SELECT COUNT(*) FROM `departments`
 
 # 8
 SELECT COUNT(1) - COUNT(`phone`) FROM `teachers`
+
+## GROUP BY
+
+# 1
+SELECT COUNT(*) AS 'number_students_for_years', YEAR(enrolment_date) as `year` FROM `students` GROUP BY `year`
+
+# 2
+SELECT count(*) as'num_teachers', office_address FROM `teachers` GROUP by office_address
+
+# 3
+SELECT AVG(vote) AS 'average_vote', exam_id FROM `exam_student` GROUP BY exam_id
+
+# 4
+SELECT COUNT(*) as 'number_degrees', department_id FROM `degrees` GROUP BY department_id
