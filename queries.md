@@ -68,6 +68,7 @@ JOIN degrees
 ON students.degree_id= degrees.id
 JOIN departments
 ON degrees.department_id = departments.id
+ORDER BY students.surname, students.name
 
 # 5
 SELECT degrees.*, courses.name as 'corso', teachers.*
